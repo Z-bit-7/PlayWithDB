@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <span id="username"></span>!</h1>
+    <p>You have successfully logged in.</p>
+
+    <script>
+        // Get the username from the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+
+        // Display the username on the page
+        document.getElementById('username').textContent = username;
+    </script>
+</body>
+</html>
